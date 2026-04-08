@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,400,500&f[]=cabinet-grotesk@800,700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #1a1a1a; display: flex; gap: 40px; padding: 60px; font-family: 'Satoshi', sans-serif; align-items: flex-start; }
+
+.card {
+  width: 900px;
+  height: 500px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ===== FRONT ===== */
+.front {
+  background: #080808;
+  color: #fff;
+}
+
+.front .grid-lines {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(#1a1a1a 1px, transparent 1px),
+    linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.5;
+}
+
+/* Aperture SVG top-right */
+.front .aperture {
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 260px; height: 260px;
+  opacity: 0.9;
+}
+
+/* Drone SVG top-left */
+.front .drone {
+  position: absolute;
+  top: 18px; left: 30px;
+  width: 160px; height: 100px;
+  opacity: 0.85;
+}
+
+.front .divider {
+  position: absolute;
+  top: 195px; left: 50px; right: 50px;
+  height: 1px;
+  background: linear-gradient(90deg, #333, #555, #333);
+}
+
+.front .name {
+  position: absolute;
+  top: 210px; left: 50px;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 62px;
+  letter-spacing: -1px;
+  color: #fff;
+  line-height: 1;
+}
+
+.front .tagline {
+  position: absolute;
+  top: 290px; left: 54px;
+  font-size: 16px;
+  color: #555;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.front .bottom-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 110px;
+  border-top: 1px solid #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+  gap: 10px;
+}
+
+.front .services {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.front .services span {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #fff;
+}
+
+.front .services .dot {
+  color: #333;
+  font-size: 10px;
+}
+
+.front .contact {
+  font-size: 13px;
+  color: #666;
+  letter-spacing: 0.5px;
+  display: flex;
+  gap: 20px;
+}
+
+.front .contact span { color: #888; }
+
+/* ===== BACK ===== */
+.back {
+  background: #080808;
+  color: #fff;
+}
+
+.back .cropmarks {
+  position: absolute; inset: 0;
+}
+
+.back .center-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.back .monogram {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 96px;
+  letter-spacing: -4px;
+  color: #fff;
+  line-height: 1;
+}
+
+.back .mono-line {
+  width: 1px;
+  height: 40px;
+  background: #2a2a2a;
+}
+
+.back .qr-box {
+  background: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.back .qr-box img {
+  width: 110px; height: 110px; display: block;
+}
+
+.back .web-label {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #444;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<!-- FRONT -->
+<div class="card front">
+  <div class="grid-lines"></div>
+
+  <!-- Aperture -->
+  <svg class="aperture" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="130" cy="130" r="120" stroke="#222" stroke-width="1.5"/>
+    <circle cx="130" cy="130" r="92" stroke="#2a2a2a" stroke-width="1"/>
+    <circle cx="130" cy="130" r="60" stroke="#333" stroke-width="1"/>
+    <!-- aperture blades -->
+    <g stroke="#fff" stroke-width="1.5" opacity="0.7">
+      <line x1="130" y1="130" x2="208" y2="68" />
+      <line x1="130" y1="130" x2="232" y2="155" />
+      <line x1="130" y1="130" x2="175" y2="222" />
+      <line x1="130" y1="130" x2="85" y2="222" />
+      <line x1="130" y1="130" x2="28" y2="155" />
+      <line x1="130" y1="130" x2="52" y2="68" />
+    </g>
+    <!-- outer blade arcs -->
+    <g stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.5">
+      <path d="M208,68 A92,92 0 0,1 232,155"/>
+      <path d="M232,155 A92,92 0 0,1 175,222"/>
+      <path d="M175,222 A92,92 0 0,1 85,222"/>
+      <path d="M85,222 A92,92 0 0,1 28,155"/>
+      <path d="M28,155 A92,92 0 0,1 52,68"/>
+      <path d="M52,68 A92,92 0 0,1 208,68"/>
+    </g>
+    <circle cx="130" cy="130" r="8" fill="#fff" opacity="0.9"/>
+    <circle cx="130" cy="130" r="3" fill="#080808"/>
+  </svg>
+
+  <!-- Drone -->
+  <svg class="drone" viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- body -->
+    <rect x="55" y="38" width="50" height="24" rx="3" stroke="#fff" stroke-width="1.8"/>
+    <!-- center cross -->
+    <line x1="55" y1="50" x2="105" y2="50" stroke="#2a2a2a" stroke-width="1"/>
+    <line x1="80" y1="38" x2="80" y2="62" stroke="#2a2a2a" stroke-width="1"/>
+    <!-- arms -->
+    <line x1="55" y1="40" x2="20" y2="18" stroke="#fff" stroke-width="1.8"/>
+    <line x1="105" y1="40" x2="140" y2="18" stroke="#fff" stroke-width="1.8"/>
+    <line x1="55" y1="60" x2="20" y2="82" stroke="#fff" stroke-width="1.8"/>
+    <line x1="105" y1="60" x2="140" y2="82" stroke="#fff" stroke-width="1.8"/>
+    <!-- rotors -->
+    <ellipse cx="20" cy="18" rx="18" ry="8" stroke="#fff" stroke-width="1.8"/>
+    <ellipse cx="140" cy="18" rx="18" ry="8" stroke="#fff" stroke-width="1.8"/>
+    <ellipse cx="20" cy="82" rx="18" ry="8" stroke="#fff" stroke-width="1.8"/>
+    <ellipse cx="140" cy="82" rx="18" ry="8" stroke="#fff" stroke-width="1.8"/>
+    <!-- rotor centers -->
+    <circle cx="20" cy="18" r="2.5" fill="#fff"/>
+    <circle cx="140" cy="18" r="2.5" fill="#fff"/>
+    <circle cx="20" cy="82" r="2.5" fill="#fff"/>
+    <circle cx="140" cy="82" r="2.5" fill="#fff"/>
+  </svg>
+
+  <div class="divider"></div>
+
+  <div class="name">MARTIN JURAJDA</div>
+  <div class="tagline">Vidět víc</div>
+
+  <div class="bottom-bar">
+    <div class="services">
+      <span>FOTO</span><span class="dot">◆</span>
+      <span>DRON</span><span class="dot">◆</span>
+      <span>VIDEO</span>
+    </div>
+    <div class="contact">
+      <span>martin@videtvic.cz</span>
+      <span>+420 731 378 442</span>
+      <span>videtvic.cz</span>
+    </div>
+  </div>
+</div>
+
+<!-- BACK -->
+<div class="card back">
+  <!-- crop marks SVG -->
+  <svg class="cropmarks" viewBox="0 0 900 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- corners -->
+    <line x1="40" y1="40" x2="110" y2="40" stroke="#fff" stroke-width="2"/>
+    <line x1="40" y1="40" x2="40" y2="110" stroke="#fff" stroke-width="2"/>
+    <line x1="860" y1="40" x2="790" y2="40" stroke="#fff" stroke-width="2"/>
+    <line x1="860" y1="40" x2="860" y2="110" stroke="#fff" stroke-width="2"/>
+    <line x1="40" y1="460" x2="110" y2="460" stroke="#fff" stroke-width="2"/>
+    <line x1="40" y1="460" x2="40" y2="390" stroke="#fff" stroke-width="2"/>
+    <line x1="860" y1="460" x2="790" y2="460" stroke="#fff" stroke-width="2"/>
+    <line x1="860" y1="460" x2="860" y2="390" stroke="#fff" stroke-width="2"/>
+    <!-- faded aperture background -->
+    <circle cx="820" cy="440" r="200" stroke="#151515" stroke-width="1.5"/>
+    <circle cx="820" cy="440" r="155" stroke="#151515" stroke-width="1"/>
+    <circle cx="820" cy="440" r="105" stroke="#161616" stroke-width="1"/>
+    <!-- faded drone bg -->
+    <g stroke="#131313" stroke-width="1.5">
+      <rect x="385" y="225" width="130" height="50" rx="3"/>
+      <line x1="385" y1="250" x2="515" y2="250"/>
+      <line x1="450" y1="225" x2="450" y2="275"/>
+      <line x1="385" y1="228" x2="320" y2="180"/>
+      <line x1="515" y1="228" x2="580" y2="180"/>
+      <line x1="385" y1="272" x2="320" y2="320"/>
+      <line x1="515" y1="272" x2="580" y2="320"/>
+      <ellipse cx="320" cy="180" rx="38" ry="16"/>
+      <ellipse cx="580" cy="180" rx="38" ry="16"/>
+      <ellipse cx="320" cy="320" rx="38" ry="16"/>
+      <ellipse cx="580" cy="320" rx="38" ry="16"/>
+    </g>
+  </svg>
+
+  <div class="center-content">
+    <div class="mono-line"></div>
+    <div class="monogram">MJ</div>
+    <div class="mono-line"></div>
+    <div class="qr-box">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://videtvic.cz&bgcolor=ffffff&color=000000&margin=1" alt="QR"/>
+    </div>
+    <div class="web-label">videtvic.cz</div>
+  </div>
+</div>
+
+</body>
+</html>
